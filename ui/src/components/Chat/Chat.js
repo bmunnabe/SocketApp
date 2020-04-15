@@ -23,7 +23,7 @@ export default function Chat(props) {
 
 			//Pass arguments to JOIN socket EP, here () is callback trigger from socket response
 			socket.emit('join', { name, room }, (name, room, myName) => {
-				console.log(`Name got from server is ${name}`);
+				console.log(`Name got from server is ${myName}`);
 			});
 
 			//Hooks method, similar to componentDidUnmount, onDestroy desiconnection io
